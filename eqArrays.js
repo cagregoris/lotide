@@ -7,16 +7,22 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(arrayOne, arrayTwo) {
-  let answer = ""
-  for(i = 0; i < arrayOne.length; i++) {
-    if(typeof arrayOne[i] === typeof arrayTwo[i] && arrayOne[i] === arrayTwo[i]) {
-      answer = true;
-    } else {
-      answer = false;
-    } 
+  if (arrayOne.length !== arrayTwo.length) {
+    return false;
   }
-  return answer;
+  else {
+    let result = false;
+    for(let i = 0; i < arrayOne.length; i++) {
+      if(arrayOne[i] != arrayTwo[i] || typeof arrayOne[i] !== typeof arrayTwo[i]) {
+        return false;
+      } else {
+        result = true;
+      }
+    }
+    return result
+  }
 };
+
 
 /*
 eqArrays([1, 2, 3], [1, 2, 3]) 
