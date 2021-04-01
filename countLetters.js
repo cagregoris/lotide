@@ -26,5 +26,3 @@ const countLetters = function(string) {
 
 const helloCount = countLetters("hello");
 console.log(helloCount);
-
-console.log(assertEqual(countLetters("hello"), {h: 1, e: 1, l: 2, o: 1}))

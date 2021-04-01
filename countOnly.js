@@ -64,6 +64,7 @@ const assertEqual = function(actual, expected) {
   
   const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
   
+  // We don't use assertEqual to compare the resulting object directly becasue our assertEqual function can only compare primitive values!
   assertEqual(result1["Jason"], 1);
   assertEqual(result1["Karima"], undefined);
   assertEqual(result1["Fang"], 2);
