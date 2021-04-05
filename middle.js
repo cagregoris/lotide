@@ -1,21 +1,3 @@
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (arrayOne.length !== arrayTwo.length) {
-    return "Assertion Failed";
-  }
-  else {
-    let result = "";
-    for(let i = 0; i < arrayOne.length; i++) {
-      if(arrayOne[i] != arrayTwo[i] || typeof arrayOne[i] !== typeof arrayTwo[i]) {
-        return "Assertion Failed";
-      } else {
-        result = "Assertion Passed";
-      }
-    }
-    return result
-  }
-};
-
-// ACTUAL FUNCTION
 const middle = function(array) {
   if (array.length <= 2) {
     return [];
@@ -28,7 +10,5 @@ const middle = function(array) {
     };
   }
 };
-console.log(middle([1, 2, 3, 4]));
 
-console.log(assertArraysEqual(middle([1, 2, 4, 7, 8]), [6]));
-console.log(assertArraysEqual(middle([1, 2, 4, 6, 7, 8]), [4, 6]));
+module.exports = middle;
